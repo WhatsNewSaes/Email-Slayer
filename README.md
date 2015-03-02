@@ -7,7 +7,7 @@ Zurb Ink + Sass + Automagic Inliner
   * [bower](http://bower.io): `[sudo] npm install bower -g`
   * [grunt.js](http://grunt.js); `[sudo] npm install -g grunt-cli`
 
-### 2. Install local dependancies (for each new instance of sparkplug)
+### 2. Install local dependancies (for each new instance)
 
   * Download Zip
   * cd to project folder
