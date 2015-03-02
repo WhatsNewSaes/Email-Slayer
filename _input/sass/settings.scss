@@ -1,0 +1,136 @@
+$primary-color:;
+$secondary-color:;
+$global-radius:3px;
+
+
+
+
+$hr-color:#d9d9d9;
+
+$row-width:580px;
+
+$container-width:$row-width;
+
+$success-bg-color:#5da423;
+$success-border-color:#457a1a;
+
+$alert-bg-color:#c60f13;
+$alert-border-color:#970b0e;
+
+// ==============================================
+//				Typography
+// ==============================================
+
+// links
+$link-color:#2ba6cb;
+$link-decoration:none;
+$link-hover-color:#2795b6;
+$link-active-color:#2795b6;
+$link-visited-color:#2ba6cb;
+
+
+// Global
+$font-color:#222222;
+$font-family:"Helvetica", "Arial", sans-serif;
+$font-weight:normal;
+$font-line-height:1.3;
+
+// Headings
+$heading-link-color:#2ba6cb;
+
+$h1-font-size:40px;
+$h2-font-size:36px;
+$h3-font-size:32px;
+$h4-font-size:28px;
+$h5-font-size:24px;
+$h6-font-size:20px;
+
+// Paragraphs
+$p-font-size:14px;
+$p-line-height:19px;
+$p-margin:0 0 10px 0;
+$p-lead-font-size:18px;
+$p-lead-line-height:21px;
+
+// alt
+$small-font-size:10px;
+
+
+// ==============================================
+//				Media Queries
+// ==============================================
+
+$break-point:600px;
+
+// ==============================================
+//				Buttons
+// ==============================================
+
+$button-font-color:#ffffff;
+$button-bg-color:#2ba6cb;
+$button-bg-hover-color:#2795b6;
+$button-border-color:#2284a1;
+
+$button-font-family:"Helvetica", "Arial", sans-serif;
+
+$button-radius:$global-radius;
+$button-round:500px;
+
+// font-sizes
+$large-button-font-size:24px;
+$medium-button-font-size:20px;
+$small-button-font-size:16px;
+$tiny-button-font-size:12px;
+
+// button-padding
+$large-button-padding:21px 0 18px;
+$medium-button-padding:12px 0 10px;
+$small-button-padding:8px 0 7px;
+$tiny-button-padding:5px 0 4px;
+
+// secondary button 
+$button-secondary-bg-color: #e9e9e9;
+$button-secondary-border-color: #d0d0d0;
+$button-secondary-font-color: #555555;
+
+
+// ==============================================
+//				Panel
+// ==============================================
+
+$panel-bg-color:#f2f2f2;
+$panel-border-color:#d9d9d9;
+$panel-padding:10px !important;
+
+
+// ==============================================
+//				Responsive Grid
+// ==============================================
+
+$wrapper-padding:10px 20px 0px 0px;
+$column-padding:0px 0px 10px;
+
+$text-pad-right:10px;
+$text-pad-left:10px;
+
+
+// ==============================================
+//				Block Grid
+// ==============================================
+
+$block-grid-width:$row-width;
+$block-grid-padding:10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
