@@ -16,9 +16,9 @@ module.exports = function(grunt) {
         includes: {
                 html: {
                     cwd: '_input', // cwd = current working directory
-                    src: ['*.html', 'templates/*.html'],
+                    src: ['*.html'],
                     dest: '_output/',
-        
+
                 options: {
                     flatten: true,
                     includePath: '_input/includes',
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 
         watch: {
             html: {
-                files: ['_input/**/*.html', 'includes/**/*.html' ],
+                files: ['_input/*.html',],
                 tasks: ['includes:html'],
                 options: {
                     nospawn: true
@@ -59,14 +59,6 @@ module.exports = function(grunt) {
             styles: {
                 files: ['_input/sass/**/*.scss'], // which files to watch
                 tasks: ['sass'],
-                options: {
-                    nospawn: true
-                }
-            },
-
-            js: {
-                files: ['_input/js/*.js'],
-                tasks: ['includes:js'],
                 options: {
                     nospawn: true
                 }
@@ -86,57 +78,19 @@ module.exports = function(grunt) {
             files: {
                 '_output/index.html': '_input/index.html'
             }
-            
+
             }
         },
 
- emailTest : {
-
-    // Your Email
-    email : 'scoelen89@gmail.com',
-
-    // Your email Subject
-    subject : 'Email Subject',
-
-    // Optional
-    transport: {
-      type: 'SMTP',
-      service: 'gmail',
-      auth: {
-        user: 'gmail.scoelen89@gmail.com',
-        pass: 'Alfalfa123'
-      }
-    }
-  }
-
-        // browserSync: {
-        //     dev: {
-        //         bsFiles: {
-        //             src: '_output/**'
-        //         },
-        //         options: {
-        //             watchTask: true,
-        //             reloadDelay: 1,
-        //             server: {
-        //                 baseDir: "_output"
-        //             }
-        //         }
-        //     }
-        // },
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-inline-css');
+    grunt.loadNpmTasks('grunt-includes');
 
-
-
-
-    grunt.registerTask('inline', ['inlinecss', 'watch'])
-    grunt.registerTask('default', ['sass', 'includes', 'copy', 'watch', 'inlinecss']);
-    grunt.registerTask('minify', ['uncss', 'cssmin']);
-
+    grunt.registerTask('inline', ['inlinecss']);
+    grunt.registerTask('default', ['sass', 'includes', 'copy', 'watch']);
 };

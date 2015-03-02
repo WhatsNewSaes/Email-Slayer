@@ -1,6 +1,6 @@
 {
-  "name": "Easy Email",
-  "version": "Beta",
+  "name": "easy-email",
+  "version": "0.0.1",
   "description": "Zurb Ink + Sass + Inliner + Grunt",
   "devDependencies": {
     "grunt": "~0.4.5",
