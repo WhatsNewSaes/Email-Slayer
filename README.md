@@ -1,5 +1,5 @@
 # Easy Email
-
+Zurb Ink + Sass + Automagic Inliner
 
 ## 1. Install global dependancies (one time installation)
 
