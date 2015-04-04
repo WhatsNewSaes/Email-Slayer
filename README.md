@@ -19,8 +19,9 @@ Enjoy.
   * Download Zip or `bower email-slayer`
   * cd to project folder
   * run `[sudo] npm install` (first time users)
-  * run `gulp` to initiate sass & watch
-  * run `inline` to to move css inline
+  * run `gulp` to initiate sass & watch (`ctrl + c` to stop watch task)
+  * run `gulp smoosher` to bring responsive grid on page within a `<style>` tag
+  * run `gulp inlineCss` to to move css inline
 
 
 
