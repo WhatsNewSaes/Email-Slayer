@@ -57,11 +57,17 @@ a {
   color: #fff;
   text-align: center;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  background-image: url('https://camo.githubusercontent.com/d059ac827b24d84632facf9b84b238ba4aeb10b…068792e636f6d2f6d656469612f4e50734e586d49305a616a30512f67697068792e676966');
+  background-size: cover;
+background-image: url('https://31.media.tumblr.com/611790ba38b96934459b506bc7550ff6/tumblr_n9nfb9OSIf1ts0e00o1_500.gif');
+background-image: url(https://31.media.tumblr.com/tumblr_mdrim4rXXw1qgjtflo1_500.gif);
+background-image: url(https://38.media.tumblr.com/7d0fec811643502a90509bd1f6bd299a/tumblr_mqoemj7Z5f1r5ndk1o1_400.gif);
+
+}
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    padding: 9rem 6rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
