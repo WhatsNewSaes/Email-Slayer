@@ -1,10 +1,11 @@
 {
-  "name": "easy-email",
+  "name": "Email-Slayer",
   "version": "0.0.1",
   "description": "Zurb Ink + Sass + Inliner + Gulp",
   "devDependencies": {
     "gulp": "~3.8.11",
     "gulp-inline-css": "~2.0.0",
-    "gulp-sass": "~1.3.3"
+    "gulp-sass": "~1.3.3",
+    "gulp-smoosher": "0.0.7"
   }
 }

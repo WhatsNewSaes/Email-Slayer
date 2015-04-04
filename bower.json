@@ -1,0 +1,22 @@
+{
+  "name": "Email-Slayer",
+  "version": "0.9.0",
+  "homepage": "https://github.com/whatsnewsaes/Easy-Email",
+  "authors": [
+    "WhatsNewSaes <scoelen89@gmail.com>"
+  ],
+  "description": "Zurb Ink + Sass + Inliner",
+  "keywords": [
+    "email",
+    "zurb",
+    "ink"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
