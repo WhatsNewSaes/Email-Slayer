@@ -27,7 +27,7 @@ gulp.task('inlineCss', function() {
 });
 
 gulp.task('smoosher', function () {
-    gulp.src('_input/basic.html')
+    gulp.src('_input/*.html')
         .pipe(smoosher())
         .pipe(gulp.dest('_output/'));
 });
@@ -39,9 +39,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function(){
-	gulp.watch('_input/sass/*/**.scss', ['sass'])
+	gulp.watch('_input/sass/**/*.*', ['sass'])
 })
 
 
 gulp.task('default', ['sass', 'watch']);
-gulp.task('inline', ['smoosher', 'inlineCss']);
