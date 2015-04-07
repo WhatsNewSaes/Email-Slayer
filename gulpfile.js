@@ -1,11 +1,40 @@
 var gulp = require('gulp'),
     inlineCss = require('gulp-inline-css'),
     sass = require('gulp-sass'),
-    smoosher = require('gulp-smoosher');
+    smoosher = require('gulp-smoosher'),
+    plumber = require('gulp-plumber'),
+    gutil = require('gulp-util'),
+    clean = require ('gulp-clean'),
+    runSequence = require('run-sequence');
 
-// https://www.npmjs.com/package/gulp-inline-css
+// lets gulp throw errors during watch without stopping
+  var onError = function (err) {
+  gutil.beep();
+  console.log(err);
+};
+
+gulp.task('sass', function () {
+    gulp.src('_input/sass/*.scss')
+    .pipe(plumber({
+      errorHandler: onError
+    }))
+    .pipe(sass())
+        .pipe(gulp.dest('css'));
+});
+
+gulp.task('watch', function(){
+    gulp.watch('_input/sass/**/*.*', ['sass'])
+
+});
+
+gulp.task('smoosher', function () {
+   return gulp.src('_input/*.html')
+        .pipe(smoosher())
+        .pipe(gulp.dest('tmp'));
+});
+
 gulp.task('inlineCss', function() {
-    return gulp.src('_output/*.html')
+    return gulp.src('tmp/*.html')
         .pipe(inlineCss({
 
                 // Whether to inline styles in <style></style>
@@ -26,21 +55,16 @@ gulp.task('inlineCss', function() {
         .pipe(gulp.dest('_output/'));
 });
 
-gulp.task('smoosher', function () {
-    gulp.src('_input/*.html')
-        .pipe(smoosher())
-        .pipe(gulp.dest('_output/'));
+gulp.task('clean', function(){
+    return gulp.src('tmp', {read:false})
+        .pipe(clean());
 });
-
-gulp.task('sass', function () {
-    gulp.src('_input/sass/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('css'));
-});
-
-gulp.task('watch', function(){
-	gulp.watch('_input/sass/**/*.*', ['sass'])
-})
-
 
 gulp.task('default', ['sass', 'watch']);
+
+// Pulls in media queries, css, then deletes tmp folder
+gulp.task('build', function(callback) {
+  runSequence('smoosher','inlineCss', 'clean',
+              callback);
+});
+

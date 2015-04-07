@@ -51,6 +51,14 @@ table.large-button td {
     border: 1px solid $button-border-color;
     color: $button-font-color;
     padding: 8px 0;
+    border-radius:$button-radius;
+    -webkit-border-radius:$button-radius;
+    -moz-border-radius:$button-radius;
+
+}
+
+table.button td {
+    padding:8px 0 !important;
 }
 
 table.tiny-button td {
