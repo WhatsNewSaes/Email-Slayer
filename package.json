@@ -1,7 +1,7 @@
 {
   "name": "Email-Slayer",
   "version": "0.9.8",
-  "description": "Zurb Ink + Sass + Inliner + Gulp",
+  "description": "Email Slayer makes building responsive emails easy and extremely efficient",
   "devDependencies": {
     "gulp": "~3.8.11",
     "gulp-inline-css": "~2.0.0",
