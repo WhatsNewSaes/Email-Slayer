@@ -1,6 +1,6 @@
 # Email Slayer
 
- *Email Slayer makes building responsive emails easy and *extremely* efficient. Here's How:*
+ Email Slayer makes building responsive emails easy and *extremely* efficient. Here's How:
 * It's built off of [Zurb's Ink](http://zurb.com/ink/) framework for responsive emails.
 * It's written in [Sass](http://sass-lang.com/) because it's 2015.
 * It brings all your CSS inline with a simple cmd line / terminal command.
@@ -15,7 +15,7 @@
 ### Getting started
   * [Download Zip](https://github.com/whatsnewsaes/Email-Slayer/archive/master.zip) or download through Bower `$ bower install email-slayer`
   * From your terminal / cmd line CD to the root of the project folder
-  * run `[sudo] npm install` (This will download all Email Slayer gulp dependancies necessary to run this project)
+  * run `$ [sudo] npm install` (This will download all Email Slayer gulp dependancies necessary to run this project)
 
 ### Using Email Slayer
   * run `$ gulp` to initiate sass & watch (`ctrl + c` to stop watch task)

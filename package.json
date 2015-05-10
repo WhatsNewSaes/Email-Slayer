@@ -1,6 +1,6 @@
 {
   "name": "Email-Slayer",
-  "version": "0.9.8",
+  "version": "1.0.0",
   "description": "Email Slayer makes building responsive emails easy and extremely efficient",
   "devDependencies": {
     "gulp": "~3.8.11",
