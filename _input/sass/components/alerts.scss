@@ -1,10 +1,12 @@
+// why are .radius and .round here?
+
 
 // Alerts
 $success-bg-color:#5da423;
-$success-border-color:#457a1a;
-$alert-bg-color:#c60f13;
-$alert-border-color:#970b0e;
+$success-border-color:darken($success-bg-color, 5%);
 
+$alert-bg-color:#c60f13;
+$alert-border-color:darken($alert-bg-color, 5%);
 
 table.success td {
     background: $success-bg-color;

@@ -1,3 +1,7 @@
+// to do
+// .test td.wrapper variable
+// .body .columns td.two, .three need mixin calculation
+// offsets need mixin calcuation
 
 // ==============================================
 //				Grid Settings
@@ -8,7 +12,6 @@ $row-width:580px;
 $break-point:$row-width;
 $container-width:$row-width;
 
-// $wrapper-padding:10px 20px 0px 0px;
 $wrapper-top-padding:10px;
 $wrapper-side-padding:20px;
 
@@ -66,7 +69,7 @@ td.wrapper {
 }
 
 .test td.wrapper{
-	  background-color:#f1f1f1;
+	background-color:#f1f1f1;
     border:1px solid #ccc;
 }
 
@@ -378,8 +381,6 @@ table.column .text-pad-right {
     padding-right: 10px;
 }
 
-
-
 /* Block Grid */
 
 .block-grid {
@@ -419,8 +420,6 @@ table.column .text-pad-right {
 .eight-up td { //52
     width: block-grid-column-width(8);
 }
-
-
 
 
 /*  Media Queries */

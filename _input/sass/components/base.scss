@@ -1,6 +1,13 @@
+//-------- to dos
+
+//change .center min-width to variable
+// $paragraph-margin:;
+// color: $hr-color; is referenced in theme
+$body-background-color:#ffffff;
+
+// ---- end to dos
 
 /* Client-specific Styles & Reset */
-
 body {
     width: 100% !important;
     min-width: 100%;
@@ -8,6 +15,7 @@ body {
     -ms-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
+    background-color:$body-background-color;
 }
 
 .ExternalClass {
@@ -85,12 +93,9 @@ hr {
     height: 1px;
     border: none;
 }
-
 #outlook a {
     padding: 0;
 }
-
-
 /* Alignment & Visibility Classes */
 
 table.center, td.center {

@@ -3,33 +3,34 @@
 //				Buttons
 // ==============================================
 
+// Colors
 $button-font-color:#ffffff;
 $button-bg-color:#2ba6cb;
 $button-bg-hover-color:#2795b6;
 $button-border-color:#2284a1;
 
-$button-font-family:"Helvetica", "Arial", sans-serif;
+$button-secondary-bg-color: #e9e9e9;
+$button-secondary-border-color: #d0d0d0;
+$button-secondary-font-color: #555555;
 
-// font-sizes
+// Font
+$button-font-family:"Helvetica", "Arial", sans-serif;
+$button-font-weight:bold;
 $large-button-font-size:24px;
 $medium-button-font-size:20px;
 $small-button-font-size:16px;
 $tiny-button-font-size:12px;
 
 // button-padding
+$normal-button-padding:8px 0 !important;
+
 $large-button-padding:21px 0 18px !important;
 $medium-button-padding:12px 0 10px !important;
 $small-button-padding:8px 0 7px !important;
 $tiny-button-padding:5px 0 4px !important;
 
-// secondary button
-$button-secondary-bg-color: #e9e9e9;
-$button-secondary-border-color: #d0d0d0;
-$button-secondary-font-color: #555555;
-
 
 /* Buttons */
-
 table.button,
 table.tiny-button,
 table.small-button,
@@ -58,7 +59,7 @@ table.large-button td {
 }
 
 table.button td {
-    padding:8px 0 !important;
+    padding:$normal-button-padding;
 }
 
 table.tiny-button td {
@@ -82,7 +83,7 @@ table.tiny-button td a,
 table.small-button td a,
 table.medium-button td a,
 table.large-button td a {
-    font-weight: bold;
+    font-weight: $button-font-weight;
     text-decoration: none;
     font-family: $button-font-family;
     color: $button-font-color;
