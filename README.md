@@ -17,6 +17,7 @@
   * From your terminal / cmd line CD to the root of the project folder
   * run `$ npm install` (This will download all dependancies necessary to run this project)
 
+
 ### Using Email Slayer
   * run `$ gulp` to initiate sass & watch (`ctrl + c` to stop watch task)
   * run `$ gulp build` to compile all of the .html files from your `_input` folder to a fully inlined version in the `_output` folder.
@@ -24,8 +25,9 @@
 ### Work Files
 ```
 Email-Slayer/
-├── input/
-│   └──  Sass/+
+
+├── _input/
+│   └── Sass/+
 │   └──  basic.html
 │   └──  hero.html
 │   └──  sidebar-hero.html
@@ -42,6 +44,7 @@ find a bug? Like to see some improvements? make an issue or submit a pull reques
 ### Contributions
 
 I want to make Email Slayer as useful & powerful as possible. If you make an awesome template from Email Slayer, please submit it through a pull request and I'll be glad to review it inclusing in the next version.
+
 
 ### License
 Email Slayer if free to use under the [MIT License](https://github.com/whatsnewsaes/Email-Slayer/blob/master/License.md) Copyright © 2015 [Seth Coelen](http://sethcoelen.com)

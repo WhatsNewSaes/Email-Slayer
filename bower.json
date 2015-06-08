@@ -1,11 +1,11 @@
 {
   "name": "email-slayer",
-  "version": "0.9.8",
+  "version": "1.0.0",
   "homepage": "https://github.com/whatsnewsaes/email-slayer",
   "authors": [
     "WhatsNewSaes <scoelen89@gmail.com>"
   ],
-  "description": "Zurb Ink + Sass + Inliner",
+  "description": "Email Slayer makes building responsive emails easy and extremely efficient",
   "keywords": [
     "email",
     "zurb",

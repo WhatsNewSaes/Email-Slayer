@@ -1,6 +1,8 @@
+
 // ==============================================
 //              Grid Settings
 // ==============================================
+
 
 // +++ Media Queries +++ //
 $row-width: 580px !default;
@@ -77,9 +79,10 @@ td.wrapper {
     position: relative;
 }
 
-.test td.wrapper {
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
+
+.test td.wrapper{
+	background-color:#f1f1f1;
+    border:1px solid #ccc;
 }
 
 table.columns,

@@ -49,8 +49,8 @@ table.button.round td {
     border-radius: $button-round;
 }
 
-/* Buttons */
 
+/* Buttons */
 table.button,
 table.tiny-button,
 table.small-button,
@@ -78,7 +78,11 @@ table.large-button td {
 }
 
 table.button td {
+<<<<<<< HEAD
     padding: 8px 0 !important;
+=======
+    padding:$normal-button-padding;
+>>>>>>> master
 }
 
 table.tiny-button td {
@@ -102,7 +106,7 @@ table.tiny-button td a,
 table.small-button td a,
 table.medium-button td a,
 table.large-button td a {
-    font-weight: bold;
+    font-weight: $button-font-weight;
     text-decoration: none;
     font-family: $button-font-family;
     color: $button-font-color;

@@ -1,8 +1,10 @@
 $hr-color: #d9d9d9 !default;
 $template-label: white !default;
+$body-background-color:#ffffff;
+
+
 
 /* Client-specific Styles & Reset */
-
 body {
     width: 100% !important;
     min-width: 100%;
@@ -10,6 +12,7 @@ body {
     -ms-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
+    background-color:$body-background-color;
 }
 
 .ExternalClass {
@@ -87,11 +90,13 @@ hr {
     height: 1px;
     border: none;
 }
-
 #outlook a {
     padding: 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 /* Alignment & Visibility Classes */
 
 table.center, td.center {
