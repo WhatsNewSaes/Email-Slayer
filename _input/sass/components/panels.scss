@@ -1,12 +1,13 @@
-/* Panels */
-
 // ==============================================
 //				Panel
 // ==============================================
 
-$panel-bg-color:#ECF8FF;
-$panel-border-color:#b9e5ff;
-$panel-padding:10px !important;
+$panel-bg-color: #ecf8ff !default;
+$panel-border-color: darken($panel-bg-color, 10%);
+$panel-padding: 10px !important;
+
+$header-bg-color: #999999 !default;
+$footer-bg-color: #ebebeb !default;
 
 .panel {
     background: $panel-bg-color;
@@ -14,12 +15,14 @@ $panel-padding:10px !important;
     padding: 10px !important;
 }
 
-.callout .wrapper{
-	padding-bottom:20px;
+.callout .wrapper {
+    padding-bottom: 20px;
 }
 
-.footer .wrapper{
-	background: #ebebeb;
+.footer {
+    background: $footer-bg-color;
 }
 
-
+.header {
+    background-color: $header-bg-color;
+}
