@@ -1,41 +1,46 @@
-// to do
-// .test td.wrapper variable
-// .body .columns td.two, .three need mixin calculation
-// offsets need mixin calcuation
 
 // ==============================================
-//				Grid Settings
+//              Grid Settings
 // ==============================================
 
-// Media Queries
-$row-width:580px;
-$break-point:$row-width;
-$container-width:$row-width;
 
-$wrapper-top-padding:10px;
-$wrapper-side-padding:20px;
+// +++ Media Queries +++ //
+$row-width: 580px !default;
+$breakpoint: $row-width !default;
+$container-width: $row-width;
 
-$column-padding:0px 0px 10px;
-$text-pad-right:10px;
-$text-pad-left:10px;
+$wrapper-top-padding: 10px;
+$wrapper-side-padding: 20px;
 
-// Blog Grid
-$block-grid-width:$row-width;
-$block-grid-padding:10px;
+$column-padding: 0px 0px 10px;
+$text-pad-right: 10px;
+$text-pad-left: 10px;
 
-$total-columns:12;
-$block-grid-columns:8;
-$column-width:100 / $total-columns;
-$container-width:$row-width;
+// +++ Block Grid +++ //
+$block-grid-width: $row-width + $wrapper-side-padding;
+$block-grid-padding: 10px;
 
+$total-columns: 12;
+$block-grid-columns: 8;
+$column-width: 100 / $total-columns;
+$container-width: $row-width;
 
 // Grid Functions
-@function grid-column-width($n){
-	@return $row-width * ($n/$total-columns) - ($wrapper-side-padding);
+@function grid-column-width($n) {
+    @return $row-width * $n / $total-columns - $wrapper-side-padding;
 }
 
-@function block-grid-column-width($n){
-	@return $row-width / $n - ($wrapper-side-padding);
+@function grid-column-width-center($n) {
+    @return $row-width * $n / $total-columns - $wrapper-side-padding * 2 - 2px;
+}
+
+@function block-grid-column-width($n) {
+    // @return $row-width / $n - $wrapper-side-padding;
+    @return ($row-width - $wrapper-side-padding) / $n - $wrapper-side-padding;
+}
+
+@function offset-column-width($n) {
+    @return $row-width * $n / $total-columns;
 }
 
 /* Responsive Grid */
@@ -53,6 +58,12 @@ table.container {
 
 table.row {
     padding: 0px;
+    width: $row-width - $wrapper-side-padding;
+    position: relative;
+}
+
+table.full-width-row {
+    padding: 0px;
     width: 100%;
     position: relative;
 }
@@ -62,11 +73,12 @@ table.container table.row {
 }
 
 td.wrapper {
-    padding-top:$wrapper-top-padding;
-    padding-left:0px;
-    padding-right:$wrapper-side-padding;
+    padding-top: $wrapper-top-padding;
+    padding-left: 0px;
+    padding-right: $wrapper-side-padding;
     position: relative;
 }
+
 
 .test td.wrapper{
 	background-color:#f1f1f1;
@@ -156,99 +168,99 @@ table.twelve {
 }
 
 table.one center {
-    min-width: grid-column-width(1);
+    min-width: grid-column-width-center(1);
 }
 
 table.two center {
-    min-width: grid-column-width(2);
+    min-width: grid-column-width-center(2);
 }
 
 table.three center {
-    min-width: grid-column-width(3);
+    min-width: grid-column-width-center(3);
 }
 
 table.four center {
-    min-width: grid-column-width(4);
+    min-width: grid-column-width-center(4);
 }
 
 table.five center {
-    min-width: grid-column-width(5);
+    min-width: grid-column-width-center(5);
 }
 
 table.six center {
-    min-width: grid-column-width(6);
+    min-width: grid-column-width-center(6);
 }
 
 table.seven center {
-    min-width: grid-column-width(7);
+    min-width: grid-column-width-center(7);
 }
 
 table.eight center {
-    min-width: grid-column-width(8);
+    min-width: grid-column-width-center(8);
 }
 
 table.nine center {
-    min-width: grid-column-width(9);
+    min-width: grid-column-width-center(9);
 }
 
 table.ten center {
-    min-width: grid-column-width(10);
+    min-width: grid-column-width-center(10);
 }
 
 table.eleven center {
-    min-width: grid-column-width(11);
+    min-width: grid-column-width-center(11);
 }
 
 table.twelve center {
-    min-width: grid-column-width(12);
+    min-width: grid-column-width-center(12) + $wrapper-side-padding;
 }
 
 table.one .panel center {
-    min-width: grid-column-width(1);
+    min-width: grid-column-width-center(1);
 }
 
 table.two .panel center {
-    min-width: grid-column-width(2);
+    min-width: grid-column-width-center(2);
 }
 
 table.three .panel center {
-    min-width: grid-column-width(3);
+    min-width: grid-column-width-center(3);
 }
 
 table.four .panel center {
-    min-width: grid-column-width(4);
+    min-width: grid-column-width-center(4);
 }
 
 table.five .panel center {
-    min-width: grid-column-width(5);
+    min-width: grid-column-width-center(5);
 }
 
 table.six .panel center {
-    min-width: grid-column-width(6);
+    min-width: grid-column-width-center(6);
 }
 
 table.seven .panel center {
-    min-width: grid-column-width(7);
+    min-width: grid-column-width-center(7);
 }
 
 table.eight .panel center {
-    min-width: grid-column-width(8);
+    min-width: grid-column-width-center(8);
 }
 
 table.nine .panel center {
-    min-width: grid-column-width(9);
+    min-width: grid-column-width-center(9);
 }
 
 table.ten .panel center {
-    min-width: grid-column-width(10);
+    min-width: grid-column-width-center(10);
 }
 
 table.eleven .panel center {
-    min-width: grid-column-width(11);
+    min-width: grid-column-width-center(11);
 }
 
 table.twelve .panel center {
-    min-width: grid-column-width(12);
+    min-width: grid-column-width-center(12);
 }
 
 .body .columns td.one,
@@ -312,47 +324,58 @@ table.twelve .panel center {
 }
 
 td.offset-by-one {
-    padding-left: 50px;
+    padding-left: offset-column-width(1);
+    padding-right: 0;
 }
 
 td.offset-by-two {
-    padding-left: 100px;
+    padding-left: offset-column-width(2);
+    padding-right: 0;
 }
 
 td.offset-by-three {
-    padding-left: 150px;
+    padding-left: offset-column-width(3);
+    padding-right: 0;
 }
 
 td.offset-by-four {
-    padding-left: 200px;
+    padding-left: offset-column-width(4);
+    padding-right: 0;
 }
 
 td.offset-by-five {
-    padding-left: 250px;
+    padding-left: offset-column-width(5);
+    padding-right: 0;
 }
 
 td.offset-by-six {
-    padding-left: 300px;
+    padding-left: offset-column-width(6);
+    padding-right: 0;
 }
 
 td.offset-by-seven {
-    padding-left: 350px;
+    padding-left: offset-column-width(7);
+    padding-right: 0;
 }
 
 td.offset-by-eight {
-    padding-left: 400px;
+    padding-left: offset-column-width(8);
+    padding-right: 0;
 }
 
 td.offset-by-nine {
-    padding-left: 450px;
+    padding-left: offset-column-width(9);
+    padding-right: 0;
 }
 
 td.offset-by-ten {
-    padding-left: 500px;
+    padding-left: offset-column-width(10);
+    padding-right: 0;
 }
 
 td.offset-by-eleven {
-    padding-left: 550px;
+    padding-left: offset-column-width(11);
+    padding-right: 0;
 }
 
 td.expander {
@@ -363,22 +386,22 @@ td.expander {
 
 table.columns .text-pad,
 table.column .text-pad {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $text-pad-left;
+    padding-right: $text-pad-right;
 }
 
 table.columns .left-text-pad,
 table.columns .text-pad-left,
 table.column .left-text-pad,
 table.column .text-pad-left {
-    padding-left: 10px;
+    padding-left: $text-pad-left;
 }
 
 table.columns .right-text-pad,
 table.columns .text-pad-right,
 table.column .right-text-pad,
 table.column .text-pad-right {
-    padding-right: 10px;
+    padding-right: $text-pad-right;
 }
 
 /* Block Grid */
@@ -393,38 +416,38 @@ table.column .text-pad-right {
     padding: $block-grid-padding;
 }
 
-.two-up td { //270
+.two-up td {
     width: block-grid-column-width(2);
 }
 
-.three-up td { //173
+.three-up td {
     width: block-grid-column-width(3);
 }
 
-.four-up td { //125
+.four-up td {
     width: block-grid-column-width(4);
 }
 
-.five-up td { //96
+.five-up td {
     width: block-grid-column-width(5);
 }
 
-.six-up td { //76
+.six-up td {
     width: block-grid-column-width(6);
 }
 
-.seven-up td { //62
+.seven-up td {
     width: block-grid-column-width(7);
 }
 
-.eight-up td { //52
+.eight-up td {
     width: block-grid-column-width(8);
 }
 
 
 /*  Media Queries */
 
-@media only screen and (max-width: $break-point) {
+@media only screen and (max-width: $breakpoint) {
     table[class="body"] img {
         width: auto !important;
         height: auto !important;
@@ -541,4 +564,3 @@ table.column .text-pad-right {
         display: inherit !important;
     }
 }
-
