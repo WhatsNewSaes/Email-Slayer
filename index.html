@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Email Slayer</title>
+    <style>
+    body {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #eee;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 2em;
+    }
+
+    h3{
+        border-top: 1px dashed #ccc;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    a,
+    a.coffee {
+        text-decoration: none;
+        font-size: 16px;
+        color: #3498db;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    a.coffee {
+        background-color: #593C1F;
+        padding: 10px 20px;
+        color: #ffffff;
+    }
+
+    a.coffee:before {
+        height: 0;
+    }
+
+    a:before {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #3498db;
+        content: '';
+        -webkit-transform: translateY(8px);
+        opacity: 0;
+        transition-property: -webkit-transform, opacity;
+        transition-duration: .3s;
+    }
+
+    a:hover:before {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Email Slayer</h1>
+    <p>Email Slayer makes building responsive emails easy and extremely efficient.</p>
+
+
+    <h3>Templates</h3>
+    <p>The following templates are included in the _input folder.</p>
+    <ul>
+        <li><a href="_input/basic.html">basic</a></li>
+        <li><a href="_input/hero.html">hero</a></li>
+        <li><a href="_input/sidebar-hero.html">sidebar hero</a></li>
+        <li><a href="_input/sidebar.html">sidebar</a></li>
+    </ul>
+
+    <h3>Helpful Links:</h3>
+    <ul>
+        <li><a target="_blank" href="http://github.com/whatsnewsaes/email-slayer">Getting Started with Email Slayer</a></li>
+        <li><a href="https://youtu.be/2w28l0d-TQM">Email Slayer Demo Video</a></li>
+        <li><a target="_blank" href="http://zurb.com/ink/">Zurb Ink Documentation</a></li>
+        <li><a href="http://i3.campaignmonitor.com/assets/files/css/campaign-monitor-guide-to-css-in-email-sep-2013V2.pdf?ver=1447">Guide to CSS in Email</a></li>
+    </ul>
+
+
+<h3>Back Story</h3>
+<p>
+<i>For generations, chaos raged across the lands. Seemingly unconquerable email clients stirred from the abyss tormenting all who dared to write a line of code against their name. Many heroes rose up in attempt to tip balance between good and evil, however, there was no single power effective enough to slay these depraved, twisted creatures.</i></p>
+
+    <h3>Created By:</h3>
+    <a target="_blank" href="http://sethcoelen.com">Seth Coelen</a>
+    <br>
+    <a class="coffee" href='http://ko-fi.com?i=1744DOT5ROKMG' target='_blank'>Buy Seth a Coffee</a>
+</body>
+
+</html>
