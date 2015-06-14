@@ -110,7 +110,7 @@ gulp.task('default', ['sass', 'watch']);
 
 // Pulls in media queries, css, then deletes tmp folder
 gulp.task('build', function(callback) {
-  runSequence('smoosher','inlineCss', 'clean',
+  runSequence('sass','smoosher','inlineCss', 'clean',
               callback);
 });
 
