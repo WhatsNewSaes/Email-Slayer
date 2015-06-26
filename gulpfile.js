@@ -30,28 +30,6 @@ gulp.task('sass', function () {
 
 
 //------------------------
-// BrowserSync
-//------------------------
-
-// This works, the only thing is, it can't link to the css folder. I might gulp copy the css folder from input to output on build...
-
-
-// gulp.task('serve', function () {
-
-//     // Serve files from the root of this project
-//     browserSync.init({
-//         server: {
-//             baseDir: "./_input"
-//         }
-//     });
-//     // Any change within the input file will reload the browser
-//     gulp.watch("_input/**").on("change", browserSync.reload);
-// });
-
-
-
-
-//------------------------
 // Watch Gulp Task
 //------------------------
 gulp.task('watch', function(){
