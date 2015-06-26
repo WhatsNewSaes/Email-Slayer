@@ -5,8 +5,6 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     gutil = require('gulp-util'),
     clean = require ('gulp-clean'),
-    browserSync = require('browser-sync').create(),
-    reload      = browserSync.reload,
     runSequence = require('run-sequence');
 
 // lets gulp throw errors during watch without stopping
