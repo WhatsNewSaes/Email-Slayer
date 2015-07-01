@@ -13,10 +13,14 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
+    // "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "node_modules",
+    "_output",
+    "css",
+    ".sass-cache"
   ]
 }
