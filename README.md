@@ -6,7 +6,7 @@
 * It brings all your CSS inline with a simple command.
 * It even brings your media queires into the `<head>` of your file.
 
-### Global Dependancies (one time installation)
+### Global Dependencies (one time installation)
 
   * Download and install [Node.js](http://nodejs.org) (If you haven't already)
   * Install Gulp globally [Gulp.js](http://gulpjs.com/) `$ npm install gulp -g` (If you haven't already)
