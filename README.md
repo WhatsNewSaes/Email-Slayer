@@ -50,5 +50,3 @@ Email Slayer if free to use under the [MIT License](https://github.com/whatsnews
 ~~Made with ♥ from New york~~~
 
 Forged with contempt from Cleveland
-
-
