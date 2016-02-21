@@ -1,5 +1,6 @@
 $hr-color: #d9d9d9 !default;
 $template-label: white !default;
+$body-bg:#ffffff !default;
 
 /* Client-specific Styles & Reset */
 
@@ -10,6 +11,7 @@ body {
     -ms-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
+    background-color: $body-bg;
 }
 
 .ExternalClass {

@@ -1,11 +1,13 @@
 var gulp = require('gulp'),
+    del = require('del'),
+    browserSync = require('browser-sync').create(),
     inlineCss = require('gulp-inline-css'),
     sass = require('gulp-sass'),
     smoosher = require('gulp-smoosher'),
     plumber = require('gulp-plumber'),
     gutil = require('gulp-util'),
-    clean = require ('gulp-clean'),
     runSequence = require('run-sequence');
+
 
 // lets gulp throw errors during watch without stopping
   var onError = function (err) {
@@ -23,8 +25,14 @@ gulp.task('sass', function () {
       errorHandler: onError
     }))
     .pipe(sass())
+    .pipe(browserSync.reload({
+            stream: true
+        }))
         .pipe(gulp.dest('css'));
+
 });
+
+
 
 
 //------------------------
@@ -73,20 +81,50 @@ gulp.task('inlineCss', function() {
 //------------------------
 // Clean Gulp Task
 //------------------------
-gulp.task('clean', function(){
-    return gulp.src('tmp', {read:false})
-        .pipe(clean());
+
+// deletes existing folders in output which will be replaced by inlined versions of _input files
+gulp.task('clean:output', function() {
+    return del([
+        '_output/**/*'
+        ]);
+    });
+
+// delets tmp folder that is created to add media queries
+gulp.task('clean:tmp', function() {
+    return del([
+       'tmp'
+        ]);
+    });
+
+//------------------------
+// Browsersync Gulp Task
+//------------------------
+
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    // gulp.watch("_input/sass/.scss", ['sass']);
+    gulp.watch("_input/*.html").on('change', browserSync.reload);
+
 });
+
 
 
 //------------------------
 // Task Config
 //------------------------
-gulp.task('default', ['sass', 'watch']);
+
+//default gulp task.
+gulp.task('default', ['sass', 'watch', 'browser-sync']);
 
 // Pulls in media queries, css, then deletes tmp folder
 gulp.task('build', function(callback) {
-  runSequence('sass','smoosher','inlineCss', 'clean',
+  runSequence('clean:output', 'sass','smoosher','inlineCss', 'clean:tmp',
               callback);
 });
 
